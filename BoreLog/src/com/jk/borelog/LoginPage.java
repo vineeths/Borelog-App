@@ -9,14 +9,20 @@ import java.util.ArrayList;
 
 import com.jk.borelog.api.Communicator;
 import com.jk.borelog.common.BaseActivity;
+import com.jk.borelog.common.Globals;
 import com.jk.borelog.common.NetworkConnectivityManager;
+import com.jk.borelog.models.Results;
+import com.jk.borelog.models.UserInfo;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.ContactsContract.CommonDataKinds.Email;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -34,6 +40,7 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_page);
+		getActionBar().hide();
 		init();
 	}
 
@@ -52,20 +59,48 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 	public void onClick(View v) {
 		
 		loginTask=new LoginTask();
+		if(validationSucceeded()){
+			loginTask.execute(userNameExt.getText().toString(),passwrdExt.getText().toString());
+		}
+		
 		
 	}
 	
-	public class LoginTask extends AsyncTask<ArrayList<String>, Void, Void> {
+	/**
+	 * 
+	 */
+	private boolean validationSucceeded() {
+		boolean validationSucceed=false;
+		if(userNameExt.getText().length()>0 && passwrdExt.getText().length()>0){
+			validationSucceed=true;
+			
+		}else if(userNameExt.getText().length()==0 && passwrdExt.getText().length()==0){
+			showAlertMessage(Globals.validation, "Please fill User name and Password.");
+		}else if(userNameExt.getText().length()>0){
+			showAlertMessage(Globals.validation, "Please fill User name.");
+			if(!(passwrdExt.getText().length()>0)){
+				showAlertMessage(Globals.validation, "Please fill Password.");
+			}
+		}else if(passwrdExt.getText().length()>0){
+			if(!(userNameExt.getText().length()>0)){
+				showAlertMessage(Globals.validation, "Please fill User name.");
+			}
+		}
+		return validationSucceed;
+		
+	}
+
+	public class LoginTask extends AsyncTask<String, Void, ArrayList<Object>> {
 
 		private ProgressDialog progressDialog;
 
-		
-		
 		@Override
-		protected void onPostExecute(Void result) {
-			super.onPostExecute(result);
+		protected void onPostExecute(ArrayList<Object> resultList) {
+			super.onPostExecute(resultList);
 			try {
 				progressDialog.dismiss();
+				doLoginResponseAction(resultList);
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -80,7 +115,7 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 			try {
 				progressDialog = ProgressDialog.show(
 						context, "",
-						"Loading data...", true);
+						"Logging in...", true);
 				progressDialog.setCancelable(true);
 				progressDialog.setOnCancelListener(new OnCancelListener() {
 					
@@ -98,13 +133,15 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 
 
 		@Override
-		protected Void doInBackground(ArrayList<String>... arg0) {
-
+		protected ArrayList<Object> doInBackground(String... arg0) {
+			ArrayList<Object>responseList=new ArrayList<Object>();
 			try { 
 				NetworkConnectivityManager manager=new NetworkConnectivityManager(context);
 				if(manager.hasDataConnectivity()){
+					
 					Communicator communicator=new Communicator(context);
-					communicator.login("sp1", "qwerty");
+					responseList=communicator.login(arg0[0], arg0[1]);
+					return responseList;
 				}
 				
 
@@ -115,6 +152,26 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 		}
 
 
+		
+	}
+
+	/**
+	 * @param resultList
+	 */
+	public void doLoginResponseAction(ArrayList<Object> resultList) {
+		
+		if(resultList.size()>0){
+			Results loginResults=(Results)resultList.get(0);
+			if(Integer.parseInt(loginResults.response)==1){
+				UserInfo userInfo=(UserInfo)resultList.get(1);
+				Intent intent=new Intent(context, ProjectList.class);
+				startActivity(intent);
+			}else{
+				showAlertMessage("Failed", loginResults.message);
+			}
+		}else{
+			showAlertMessage("Error", "Something bad happened, please try again.");
+		}
 		
 	}
 	

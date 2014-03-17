@@ -2,34 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash" >
+    android:background="@drawable/bg"
+    android:gravity="center" >
     
-<LinearLayout 
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"   
     android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp" 
-    >
+    android:layout_marginRight="30dp"
+    android:background="@drawable/opasity_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
      <EditText
         android:id="@+id/username_ext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/login_bt"
-        android:layout_marginTop="24dp"
+        android:layout_height="50dp"
+        android:textSize="24sp"
         android:ems="10"
-        android:background="@android:color/white"
+        android:background="@drawable/top_rounded"
         android:inputType="textPersonName" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp" 
+        android:background="@drawable/strock"/>
 
      <EditText
         android:id="@+id/password_ext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/white"
+        android:layout_height="50dp"
         android:ems="10"
+       	android:textSize="24sp"
+       	android:background="@drawable/bottom_rounded"
         android:inputType="textPassword" >
 
     </EditText>

@@ -4,6 +4,8 @@
  */
 package com.jk.borelog.api;
 
+import java.util.ArrayList;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -11,9 +13,13 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.jk.borelog.common.Globals;
 import com.jk.borelog.common.NetworkConnectivityManager;
+import com.jk.borelog.models.Results;
+import com.jk.borelog.models.UserInfo;
 
 import android.content.Context;
 import android.util.Log;
@@ -39,46 +45,26 @@ public class Communicator {
 	 * @param userName
 	 * @param password
 	 */
-	public void login(String userName, String password) {
-		try {
+	public ArrayList<Object> login(String userName, String password) {
+		
 		 JSONObject loginDetails = new JSONObject();
-		 loginDetails.put("UserID", userName);
-		 loginDetails.put("Password", password);
-
-//         JSONObject j = new JSONObject();
-//         j.put("memberDetails", loginDetails);
-
-      //Instead of "http://www.xxx.com/service/xxx.asmx/" add your ASMX link
-         
-         String url = "http://203.211.146.160/borelogmobile/BoreholeLog.asmx/LoginValidate";
-
-         HttpClient httpclient = new DefaultHttpClient();
-         HttpPost request = new HttpPost(url);
-
-         StringEntity s = new StringEntity(loginDetails.toString(), "UTF-8");
-
-         s.setContentType("application/json;charset=UTF-8");
-         request.setHeader("Accept", "application/json");
-         request.setHeader("Content-Type", "application/json; charset=utf-8");
-         request.setEntity(s);
-
-         HttpResponse response = httpclient.execute(request);
-
-         int i = response.getStatusLine().getStatusCode();
-
-         System.out.println("StatusCode "+i);
-
-         if (response.getStatusLine().getStatusCode() == 200)
-         {
-             HttpEntity entity = response.getEntity();
-             String json = EntityUtils.toString(entity);
-             Log.v("response", json);
-         }
+		 String url=Globals.baseURL+"LoginValidate";
+		 ArrayList<Object>loginResponseList=new ArrayList<Object>();
+		 try {
+			loginDetails.put("UserID", userName);
+			 loginDetails.put("Password", password);
+			 JSONObject loginResponse=PostRequest.post(url, loginDetails);
+			 JSONObject innerObject=new JSONObject(loginResponse.get("d").toString());
+			 Results results=new Results(innerObject.getJSONObject("Result"));
+			 UserInfo userInfo=new UserInfo(innerObject.getJSONObject("UserInfo"));
+			 loginResponseList.add(results);
+			 loginResponseList.add(userInfo);
+			 return loginResponseList;
+		} catch (JSONException e) {
+			e.printStackTrace();
 		}
-		 catch (Exception e) {
-             e.printStackTrace();
-            Log.v("Exception", e.toString());
-         }
+		return null;
+
 		}
 
 	

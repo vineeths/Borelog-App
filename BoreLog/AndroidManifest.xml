@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name="LoginPage"></activity>
+        <activity android:name="ProjectList"></activity>
     </application>
 
 </manifest>
