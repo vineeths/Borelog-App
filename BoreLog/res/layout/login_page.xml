@@ -21,11 +21,12 @@
         android:layout_height="50dp"
         android:textSize="24sp"
         android:ems="10"
+        android:paddingLeft="3dp"
         android:background="@drawable/top_rounded"
         android:inputType="textPersonName" />
     <View
         android:layout_width="wrap_content"
-        android:layout_height="2dp" 
+        android:layout_height="1dp" 
         android:background="@drawable/strock"/>
 
      <EditText
@@ -33,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
+        android:paddingLeft="3dp"
        	android:textSize="24sp"
        	android:background="@drawable/bottom_rounded"
         android:inputType="textPassword" >

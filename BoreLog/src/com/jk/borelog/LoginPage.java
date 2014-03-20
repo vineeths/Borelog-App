@@ -53,6 +53,10 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 		userNameExt=(EditText)findViewById(R.id.username_ext);
 		passwrdExt=(EditText)findViewById(R.id.password_ext);
 		loginBt.setOnClickListener(this);
+		
+		//for test
+		userNameExt.setText("sp1");
+		passwrdExt.setText("qwerty");
 	}
 
 	@Override
@@ -164,10 +168,11 @@ public class LoginPage extends BaseActivity implements OnClickListener {
 			Results loginResults=(Results)resultList.get(0);
 			if(Integer.parseInt(loginResults.response)==1){
 				UserInfo userInfo=(UserInfo)resultList.get(1);
+				Globals.userInfo=userInfo;
 				Intent intent=new Intent(context, ProjectList.class);
 				startActivity(intent);
 			}else{
-				showAlertMessage("Failed", loginResults.message);
+				showAlertMessage("Failed to login", loginResults.message);
 			}
 		}else{
 			showAlertMessage("Error", "Something bad happened, please try again.");
