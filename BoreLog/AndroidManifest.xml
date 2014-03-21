@@ -29,6 +29,7 @@
         <activity android:name="ProjectList"></activity>
         <activity android:name="BoreHoleNoSelectionView"></activity>
         <activity android:name="BoreHoleDetailPage"></activity>
+        <activity android:name="BoreHoleInfoDetailPage"></activity>
     </application>
 
 </manifest>

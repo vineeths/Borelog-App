@@ -8,12 +8,14 @@ package com.jk.borelog;
 import android.app.ActionBar;
 import android.app.ActionBar.LayoutParams;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jk.borelog.common.BaseActivity;
@@ -27,6 +29,7 @@ public class BoreHoleDetailPage extends BaseActivity implements OnClickListener 
 
 	Context context;
 	TextView projectTitle,statusText;
+	ImageView boreHoleInfo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,10 +41,13 @@ public class BoreHoleDetailPage extends BaseActivity implements OnClickListener 
 	 * 
 	 */
 	private void init() {
+		context=BoreHoleDetailPage.this;
 		setActionBar();
 		statusText=(TextView)findViewById(R.id.statusText);
 		projectTitle=(TextView)findViewById(R.id.projectTitle);
 		projectTitle.setText(Globals.projectInfoItem.projectName);
+		boreHoleInfo=(ImageView)findViewById(R.id.boreholeinfo);
+		boreHoleInfo.setOnClickListener(this);
 	}
 
 	/**
@@ -64,14 +70,16 @@ public class BoreHoleDetailPage extends BaseActivity implements OnClickListener 
 		getActionBar().setCustomView(v,lp);
 	}
 
-	/* (non-Javadoc)
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View arg0) {
 		if(arg0.getId()==R.id.leftBarButton){
 			Globals.boreHoleInfoItem=null;
 			finish();
+		}else if (arg0.getId()==R.id.boreholeinfo) {
+			
+			Intent intent=new Intent(context, BoreHoleInfoDetailPage.class);
+			startActivity(intent);
+			
 		}
 	}
 }

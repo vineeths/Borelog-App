@@ -12,6 +12,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="19dp"
         android:text="Draft"
+        android:textColor="@color/blue"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -41,7 +42,7 @@
             android:layout_weight="0.5"
             android:src="@drawable/borehole_info" />
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/daily_journal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -60,14 +61,14 @@
         >
 
         <ImageView
-            android:id="@+id/boreholeinfo"
+            android:id="@+id/drilling_log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:src="@drawable/drilling_logo" />
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/in_situ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"

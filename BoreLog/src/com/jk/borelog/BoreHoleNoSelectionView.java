@@ -11,21 +11,23 @@ import com.jk.borelog.common.Globals;
 import com.jk.borelog.models.BoreHoleInfoItem;
 
 import android.app.ActionBar;
-import android.app.Activity;
-import android.app.ActionBar.LayoutParams;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
-import android.provider.Settings.Global;
+import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,6 +58,20 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 		newBt.setOnClickListener(this);
 		lastSubmittedBt=(Button)findViewById(R.id.lastSubmittedBt);
 		boreHoleListView=(ListView)findViewById(R.id.boreHoleList);
+		Display display = getWindowManager().getDefaultDisplay();
+		Point size = new Point();
+		display.getSize(size);
+		int height = size.y;
+		if(Globals.projectInfoItem.boreHoleInfoItemList.size()>5){
+			LayoutParams lp=new LayoutParams(
+					android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+					height/2);
+			lp.setMargins(5, 5, 5, 5);
+			lp.addRule(RelativeLayout.CENTER_HORIZONTAL);
+			boreHoleListView.setLayoutParams(lp);
+			boreHoleListView.setPadding(5, 5, 5, 5);
+		}
+		boreHoleListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		boreHoleNoSelectionListAdapter=new BoreHoleNoSelectionListAdapter
 				(context, R.id.boreHoleList, Globals.projectInfoItem.boreHoleInfoItemList);
 		boreHoleListView.setAdapter(boreHoleNoSelectionListAdapter);
@@ -66,18 +82,25 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		BoreHoleInfoItem boreHoleInfoItem=(BoreHoleInfoItem) arg0.getAdapter().getItem(arg2);
 		
+		BoreHoleInfoItem boreHoleInfoItem=(BoreHoleInfoItem) arg0.getAdapter().getItem(arg2);
+		for (int i = 0; i < arg0.getChildCount(); i++) {
+			if(i!=arg2){
+				CheckBox checkBox=(CheckBox) arg0.getChildAt(i).findViewById(R.id.boreHoleCheckBox);
+				TextView textView=(TextView) arg0.getChildAt(i).findViewById(R.id.boreHoleText);
+				checkBox.setChecked(false);
+			}
+		}
 		CheckBox clickedView=(CheckBox) arg1.findViewById(R.id.boreHoleCheckBox);
-		Toast.makeText(context, "test "+clickedView.isChecked(), Toast.LENGTH_SHORT).show();
 		if(clickedView.isChecked()){
 			clickedView.setChecked(false);
+			Globals.boreHoleInfoItem=null;
 		}
 		else{
 			clickedView.setChecked(true);
 			Globals.boreHoleInfoItem=boreHoleInfoItem.boreHoleInfoNo;
 		}
-		
+		boreHoleNoSelectionListAdapter.notifyDataSetChanged();
 	}
 
 	/**
@@ -87,7 +110,7 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 		getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setDisplayShowTitleEnabled(false); 
-		LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, Gravity.CENTER_VERTICAL);
+		android.app.ActionBar.LayoutParams lp = new android.app.ActionBar.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT, Gravity.CENTER_VERTICAL);
 		LayoutInflater layoutInflater=(LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View v= layoutInflater.inflate(R.layout.action_bar_view, null);
 		TextView title=(TextView)v.findViewById(R.id.title);
@@ -107,9 +130,13 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 			Globals.projectInfoItem=null;
 			finish();
 		}else if (v.getId()==R.id.newBt) {
+			if(Globals.boreHoleInfoItem!=null){
+				Intent i=new Intent(context, BoreHoleDetailPage.class);
+				startActivity(i);
+			}else{
+				showAlertMessage("Validation", "Please select one of the BoreHole");
+			}
 			
-			Intent i=new Intent(context, BoreHoleDetailPage.class);
-			startActivity(i);
 		}
 	}
 

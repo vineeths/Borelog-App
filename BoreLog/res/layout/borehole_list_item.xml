@@ -12,12 +12,14 @@
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <CheckBox
+   <CheckBox
         android:id="@+id/boreHoleCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text=""/>
+        android:focusable="false"
+		android:focusableInTouchMode="false"
+        android:text=""/> 
 
 </RelativeLayout>

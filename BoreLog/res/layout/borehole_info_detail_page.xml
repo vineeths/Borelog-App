@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/light_blue" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       	<RelativeLayout
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/dateTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Date"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/date"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Date"
+       		    android:layout_alignParentRight="true"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       
+       <RelativeLayout
+            android:id="@+id/rigNumrLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/rigNumrTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Rig No"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/rigNumr"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/rigNumrArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/rigNumrArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/drillingMethodLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/drillingMethodTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Drilling Method"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/drillingMethodValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/drillingMethodArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/drillingMethodArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/diameterCasingLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/diameterCasingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Drilling Method"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/diameterCasingExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/diameterCasingUnit"
+       		    android:layout_centerVertical="true"
+       		    android:gravity="right"
+       		    android:ems="10"
+       		    android:background="@android:color/white"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+        		android:id="@+id/diameterCasingUnit"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:text="(mm)"
+        		 />
+       </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
