@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ScrollView 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
     android:background="@color/light_blue" >
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+        >
     
     <LinearLayout
+        android:id="@+id/dataContainerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+		android:padding="5dp"
         android:background="@drawable/round_corner_bg"
         android:orientation="vertical"
          >
@@ -16,6 +27,7 @@
         	android:layout_width="match_parent"
        		android:layout_height="wrap_content"
         	android:padding="3dp"	
+        	android:layout_marginTop="15dp"
         	>
 
        		<TextView
@@ -27,7 +39,7 @@
        		    android:layout_centerVertical="true"
        		    android:textAppearance="?android:attr/textAppearanceMedium" />
        		<TextView
-       		    android:id="@+id/date"
+       		    android:id="@+id/dateValue"
        		    android:layout_width="wrap_content"
        		    android:layout_height="wrap_content"
        		    android:text="Date"
@@ -127,19 +139,21 @@
        		    android:id="@+id/diameterCasingTV"
        		    android:layout_width="wrap_content"
        		    android:layout_height="wrap_content"
-       		    android:text="Drilling Method"
+       		    android:text="Diameter of Casing"
        		    android:layout_alignParentLeft="true"
        		    android:layout_centerVertical="true"
+       		    android:layout_marginRight="2dp"
        		    android:textAppearance="?android:attr/textAppearanceMedium" />
        		<EditText
        		    android:id="@+id/diameterCasingExt"
        		    android:layout_width="wrap_content"
        		    android:layout_height="wrap_content"
-       		    android:text="yyy"
        		    android:layout_toLeftOf="@+id/diameterCasingUnit"
        		    android:layout_centerVertical="true"
        		    android:gravity="right"
-       		    android:ems="10"
+       		    android:ems="6"
+       		    android:paddingRight="2dp"
+       		    android:singleLine="true"
        		    android:background="@android:color/white"
        		    android:textAppearance="?android:attr/textAppearanceMedium" />
        		<TextView
@@ -151,5 +165,414 @@
         		android:text="(mm)"
         		 />
        </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/diameterBoreHoleLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/diameterBoreHoleTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Diameter of Borehole"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_marginRight="2dp"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/diameterBoreHoleExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_toLeftOf="@+id/diameterBoreHoleUnit"
+       		    android:layout_centerVertical="true"
+       		    android:gravity="right"
+       		    android:ems="6"
+       		    android:singleLine="true"
+       		    android:paddingRight="2dp"
+       		    android:background="@android:color/white"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+        		android:id="@+id/diameterBoreHoleUnit"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:text="(mm)"
+        		 />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/harmerIDLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/harmerIDTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Harmer ID No"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/harmerIDValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/harmerIDArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/harmerIDArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/northingLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/northingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Northing"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/northingValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/northingArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/northingArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/eastingLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/eastingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Easting"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/eastingValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/eastingArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/eastingArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/superVisorLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/superVisorTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Supervisor Name"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/superVisorValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_alignParentRight="true"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/drillerNameLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/drillerNameTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Driller Name"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/drillerNameValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/drillerNameArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/drillerNameArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/assistantName1Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/assistantName1TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Assistant Name 1"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/assistantName1Value"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/assistantName1Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/assistantName1Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/assistantName2Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/assistantName2TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Assistant Name 2"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/assistantName2Value"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/assistantName2Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/assistantName2Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/assistantName3Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/assistantName3TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Assistant Name 3"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/assistantName3Value"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/assistantName3Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/assistantName3Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/assistantName4Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+
+       		<TextView
+       		    android:id="@+id/assistantName4TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Assistant Name 4"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/assistantName4Value"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/assistantName4Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/assistantName4Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/remarksLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:layout_marginBottom="15dp"
+        	>
+
+       		<TextView
+       		    android:id="@+id/remarksTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Remarks"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_marginRight="2dp"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/remarksExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_toLeftOf="@+id/remarksArrow"
+       		    android:layout_centerVertical="true"
+       		    android:textColor="@color/blue"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/remarksArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
     </LinearLayout>
+    <Button
+            android:id="@+id/saveBoreHoleInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/dataContainerLayout"
+            android:background="@drawable/green_button"
+            android:layout_marginBottom="40dp"
+            android:text="Save" />
+    </RelativeLayout>
 </ScrollView>
+</RelativeLayout>

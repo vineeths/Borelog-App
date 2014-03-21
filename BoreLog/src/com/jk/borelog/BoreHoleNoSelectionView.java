@@ -5,12 +5,12 @@
  */
 package com.jk.borelog;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.jk.borelog.adapter.BoreHoleNoSelectionListAdapter;
 import com.jk.borelog.common.BaseActivity;
 import com.jk.borelog.common.Globals;
 import com.jk.borelog.models.BoreHoleInfoItem;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -107,10 +107,10 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 	 * 
 	 */
 	private void setActionBar() {
-		getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setDisplayShowTitleEnabled(false); 
-		android.app.ActionBar.LayoutParams lp = new android.app.ActionBar.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT, Gravity.CENTER_VERTICAL);
+		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		getSupportActionBar().setDisplayShowHomeEnabled(false);
+		getSupportActionBar().setDisplayShowTitleEnabled(false); 
+		com.actionbarsherlock.app.ActionBar.LayoutParams lp = new com.actionbarsherlock.app.ActionBar.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT, Gravity.CENTER_VERTICAL);
 		LayoutInflater layoutInflater=(LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View v= layoutInflater.inflate(R.layout.action_bar_view, null);
 		TextView title=(TextView)v.findViewById(R.id.title);
@@ -120,7 +120,7 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 		backButton.setOnClickListener(this);
 		Button rightBarButton=(Button)v.findViewById(R.id.rightBarButton);
 		rightBarButton.setVisibility(View.GONE);
-		getActionBar().setCustomView(v,lp);
+		getSupportActionBar().setCustomView(v,lp);
 	}
 
 	@Override

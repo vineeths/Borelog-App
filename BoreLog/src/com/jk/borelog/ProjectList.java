@@ -7,8 +7,6 @@ package com.jk.borelog;
 
 import java.util.ArrayList;
 
-import android.app.ActionBar;
-import android.app.ActionBar.LayoutParams;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -28,6 +26,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.LayoutParams;
 import com.jk.borelog.adapter.ProjectListAdapter;
 import com.jk.borelog.api.Communicator;
 import com.jk.borelog.common.BaseActivity;
@@ -73,9 +73,9 @@ public class ProjectList extends BaseActivity implements OnClickListener, OnItem
 	 * 
 	 */
 	private void setActionBar() {
-		getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setDisplayShowTitleEnabled(false); 
+		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		getSupportActionBar().setDisplayShowHomeEnabled(false);
+		getSupportActionBar().setDisplayShowTitleEnabled(false); 
 		LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, Gravity.CENTER_VERTICAL);
 		LayoutInflater layoutInflater=(LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View v= layoutInflater.inflate(R.layout.action_bar_view, null);
@@ -86,7 +86,7 @@ public class ProjectList extends BaseActivity implements OnClickListener, OnItem
 		logoutButton.setOnClickListener(this);
 		Button leftBarButton=(Button)v.findViewById(R.id.leftBarButton);
 		leftBarButton.setVisibility(View.GONE);
-		getActionBar().setCustomView(v,lp);
+		getSupportActionBar().setCustomView(v,lp);
 	}
 
 	public class ProjectDetailsTask extends AsyncTask<Void, Void, ArrayList<Object>> {

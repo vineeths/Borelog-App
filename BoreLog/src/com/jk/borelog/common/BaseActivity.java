@@ -5,13 +5,14 @@
  */
 package com.jk.borelog.common;
 
+import com.actionbarsherlock.app.SherlockActivity;
 import com.jk.borelog.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends SherlockActivity {
 
 	public void showAlertMessage(String title,String message){
 		new AlertDialog.Builder(this)
