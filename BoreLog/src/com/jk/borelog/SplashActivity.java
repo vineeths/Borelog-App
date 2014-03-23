@@ -14,7 +14,6 @@ import com.jk.borelog.common.BaseActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
 
 public class SplashActivity extends BaseActivity {
 
@@ -24,7 +23,7 @@ public class SplashActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
-		getActionBar().hide();
+		getSupportActionBar().hide();
 		 /* New Handler to start the Menu-Activity 
          * and close this Splash-Screen after some seconds.*/
         new Handler().postDelayed(new Runnable(){

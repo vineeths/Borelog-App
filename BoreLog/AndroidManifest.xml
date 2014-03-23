@@ -10,12 +10,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Sherlock.Light" >
         <activity
             android:name="com.jk.borelog.SplashActivity"
             android:label="@string/app_name" >
@@ -30,6 +33,12 @@
         <activity android:name="BoreHoleNoSelectionView"></activity>
         <activity android:name="BoreHoleDetailPage"></activity>
         <activity android:name="BoreHoleInfoDetailPage"></activity>
+        <activity android:name="DailyJournalPage"></activity>
+        <activity android:name="AddDailyJournalPage"></activity>
+        <activity android:name="AddInsituTestLogPage"></activity>
+        <activity android:name="InsituTestLogPage"></activity>
+        <activity android:name="DrillingLogPage"></activity>
+        <activity android:name="AddDrillingLogPage"></activity>
     </application>
 
 </manifest>

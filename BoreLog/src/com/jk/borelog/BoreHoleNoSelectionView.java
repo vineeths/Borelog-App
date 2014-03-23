@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -58,10 +59,9 @@ public class BoreHoleNoSelectionView extends BaseActivity implements OnItemClick
 		newBt.setOnClickListener(this);
 		lastSubmittedBt=(Button)findViewById(R.id.lastSubmittedBt);
 		boreHoleListView=(ListView)findViewById(R.id.boreHoleList);
-		Display display = getWindowManager().getDefaultDisplay();
-		Point size = new Point();
-		display.getSize(size);
-		int height = size.y;
+		DisplayMetrics dm = new DisplayMetrics(); 
+		getWindowManager().getDefaultDisplay().getMetrics(dm); 
+		int height = dm.heightPixels;
 		if(Globals.projectInfoItem.boreHoleInfoItemList.size()>5){
 			LayoutParams lp=new LayoutParams(
 					android.view.ViewGroup.LayoutParams.MATCH_PARENT,

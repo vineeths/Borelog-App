@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="10dp"
+    android:background="@color/light_blue">
+
+    <LinearLayout
+        android:id="@+id/verticalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"    
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/round_corner_bg" >
+
+         <RelativeLayout
+            android:id="@+id/strtTimeLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:paddingLeft="5dp"
+        	android:paddingTop="5dp"
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/strtTimeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Start Time"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/strtTimeValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/strtTimeArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/strtTimeArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/activityLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:paddingLeft="5dp"
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/activityTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Activity"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/activityValue"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/activityArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/activityArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/photoLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:paddingLeft="5dp"
+        	android:paddingBottom="5dp"
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/photoTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Upload photo"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		
+       		<ImageView
+        		android:id="@+id/photoArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+        
+    </LinearLayout>
+	<Button
+        android:id="@+id/saveActivityLogBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/verticalContainer"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green_button"
+        android:textColor="@android:color/white"
+        android:text="Save" />
+    
+
+</RelativeLayout>
