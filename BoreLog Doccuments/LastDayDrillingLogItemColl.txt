@@ -1,0 +1,220 @@
+{
+  "Result" : {
+    "Response" : 1,
+    "ErrorDesc" : ""
+  },
+  "LastDayBHInfo" : {
+    "TerminationDepth" : 55,
+    "DiameterofBorehole" : 100,
+    "Northing" : "0.0",
+    "AssistantName4" : "",
+    "ProjectName" : "Site Investigation Works For Contract C2111E (B\/05)",
+    "LastRecordDepth" : 53,
+    "DrillerName" : "Mostafiaur",
+    "ContractGUID" : "2e23c089-0f98-478f-b277-caa8fba53547",
+    "AssistantName1" : "Suresh",
+    "BoreholeID" : 21,
+    "ProjectManagerName" : "Project Manager",
+    "BoreholeNo" : "1",
+    "InSituLogMaxDepthItemColl" : [
+      {
+        "MaxDepth" : 37,
+        "InsituType" : "ATT - MZ"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "ATT - PS"
+      },
+      {
+        "MaxDepth" : 11.9,
+        "InsituType" : "ATT - TW"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "ATT - UD"
+      },
+      {
+        "MaxDepth" : 3,
+        "InsituType" : "Auger"
+      },
+      {
+        "MaxDepth" : 2.2,
+        "InsituType" : "Borehole Shifted"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "CR"
+      },
+      {
+        "MaxDepth" : 55,
+        "InsituType" : "Ground Water Observation"
+      },
+      {
+        "MaxDepth" : 22,
+        "InsituType" : "MZ"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "PBT"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "PKT"
+      },
+      {
+        "MaxDepth" : 26,
+        "InsituType" : "PRM"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "PS"
+      },
+      {
+        "MaxDepth" : 13,
+        "InsituType" : "PZS"
+      },
+      {
+        "MaxDepth" : 43.45,
+        "InsituType" : "SPT"
+      },
+      {
+        "MaxDepth" : 1,
+        "InsituType" : "Trial Pit"
+      },
+      {
+        "MaxDepth" : 13.9,
+        "InsituType" : "TW"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "UD"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "VST"
+      },
+      {
+        "MaxDepth" : 0,
+        "InsituType" : "WSP"
+      }
+    ],
+    "RigNo" : "R46",
+    "AssistantName3" : "",
+    "Easting" : "0.0",
+    "LastDayActivityLogItemColl" : [
+      {
+        "TypeofInstallation" : null,
+        "Activity" : "Start of Work",
+        "Depth" : null,
+        "StartTime" : "08:30 AM"
+      },
+      {
+        "TypeofInstallation" : null,
+        "Activity" : "Lunchtime",
+        "Depth" : null,
+        "StartTime" : "12:00 PM"
+      },
+      {
+        "TypeofInstallation" : null,
+        "Activity" : "Restart work",
+        "Depth" : null,
+        "StartTime" : "01:00 PM"
+      },
+      {
+        "TypeofInstallation" : null,
+        "Activity" : "End of Work",
+        "Depth" : null,
+        "StartTime" : "06:00 PM"
+      },
+      {
+        "TypeofInstallation" : null,
+        "Activity" : "Inclement Weather",
+        "Depth" : null,
+        "StartTime" : "06:30 PM"
+      }
+    ],
+    "ClientName" : "LTA",
+    "SupervisorName" : "Supervisor1",
+    "BoreholeDate" : "18\/05\/13",
+    "ProjectNo" : "SIL\/S0005\/13\/SI",
+    "LastDayDrillingLogItemColl" : [
+      {
+        "Depth" : 46,
+        "Type" : "SOILTYPE",
+        "Description" : "Very Dense\\n Light Grey None\\n None Silty\\n SAND with concrete\\n Fine To Medium grained\\n Subangular To Subrounded\\n Original was preserved\\n Partially Weathered OA(B)\\n OLD ALLUVIUM None"
+      },
+      {
+        "Depth" : 49,
+        "Type" : "SOILTYPE",
+        "Description" : "Very Dense\\n Light Greenish Grey Spotted White\\n None Silty\\n SAND with concrete\\n Fine To Medium grained\\n Angular\\n Original was preserved\\n Partially Weathered OA(B)\\n OLD ALLUVIUM None"
+      },
+      {
+        "Depth" : 53,
+        "Type" : "SOILTYPE",
+        "Description" : "Very Dense\\n Light Yellowish Mottled Brown\\n None Gravelly\\n Silty SAND with concrete\\n Fine To Coarse grained\\n Angular To Subrounded\\n Unweathered OA(A)\\n OLD ALLUVIUM None\\nBorehole terminated at 55.00 (m)"
+      }
+    ],
+    "LastDayInSituLogItemColl" : [
+      {
+        "Value9" : 0,
+        "Value3" : 0,
+        "Value8" : 0,
+        "Value2" : 0,
+        "InSituTestType" : "PZS",
+        "Penetration" : 0,
+        "Value7" : 0,
+        "Value1" : 13,
+        "TimeStamp" : null,
+        "Value6" : 0,
+        "Description" : "PZS1",
+        "Total" : 0,
+        "SDPenetration" : 0,
+        "Value5" : 0,
+        "Recovery" : 0,
+        "Value4" : 0
+      },
+      {
+        "Value9" : 0,
+        "Value3" : 46,
+        "Value8" : 0,
+        "Value2" : 40,
+        "InSituTestType" : "Ground Water Observation",
+        "Penetration" : 0,
+        "Value7" : 0,
+        "Value1" : 44,
+        "TimeStamp" : "10:00 AM",
+        "Value6" : 0,
+        "Description" : "GW13",
+        "Total" : 0,
+        "SDPenetration" : 0,
+        "Value5" : 0,
+        "Recovery" : 0,
+        "Value4" : 0
+      },
+      {
+        "Value9" : 0,
+        "Value3" : 5,
+        "Value8" : 0,
+        "Value2" : 50,
+        "InSituTestType" : "Ground Water Observation",
+        "Penetration" : 0,
+        "Value7" : 0,
+        "Value1" : 55,
+        "TimeStamp" : "06:30 PM",
+        "Value6" : 0,
+        "Description" : "GW14",
+        "Total" : 0,
+        "SDPenetration" : 0,
+        "Value5" : 0,
+        "Recovery" : 0,
+        "Value4" : 0
+      }
+    ],
+    "DiameterofCasing" : 100,
+    "BHGUID" : "0f9ca03d-f05b-4d80-b8e8-dac8daf0ec62",
+    "AssistantName2" : "",
+    "DrillingMethod" : "Rotary",
+    "HammerIDNo" : "",
+    "Remarks" : ""
+  }
+}

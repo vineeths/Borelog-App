@@ -140,9 +140,10 @@
        		    android:layout_width="wrap_content"
        		    android:layout_height="wrap_content"
        		    android:text="Diameter of Casing"
-       		    android:layout_alignParentLeft="true"
+       		    android:layout_toLeftOf="@+id/diameterCasingExt"
        		    android:layout_centerVertical="true"
        		    android:layout_marginRight="2dp"
+       		    android:lines="2"
        		    android:textAppearance="?android:attr/textAppearanceMedium" />
        		<EditText
        		    android:id="@+id/diameterCasingExt"
@@ -181,8 +182,9 @@
        		    android:layout_width="wrap_content"
        		    android:layout_height="wrap_content"
        		    android:text="Diameter of Borehole"
-       		    android:layout_alignParentLeft="true"
        		    android:layout_marginRight="2dp"
+       		    android:layout_toLeftOf="@+id/diameterBoreHoleExt"
+       		    android:lines="2"
        		    android:layout_centerVertical="true"
        		    android:textAppearance="?android:attr/textAppearanceMedium" />
        		<EditText

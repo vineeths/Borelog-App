@@ -1,0 +1,299 @@
+
+{
+  
+	"objSaveBoreholeInfoResult" : 
+	{
+    "SaveBHInfo" : 
+			{
+    
+				  "DiameterofBorehole" : "20",
+     
+				 "Northing" : "-122.40641700",
+    
+				  "DrillerName" : "Chan Chun Seng",
+     
+				 "AssistantName1" : "Assistant Kumar",
+      
+				"SaveSoilTypeLogItemColl" : [
+       
+				 {
+          
+					"WeatheringDesc" : "Destructured",
+        
+					  "SoilDescription" : "Slightly",
+         
+					 "ParticleSizeFrom" : "Coarse",
+         
+					 "PrimaryColor2" : "Brown",
+         
+					 "GeoClassification" : "E",
+         
+					 "SecondarySoilType2" : "Organic",
+         
+					 "SoilStrengthCatTo" : "Hard",
+          
+					"Intensity" : "Dark",
+          
+					"PrimaryColor1" : "Green",
+         
+					 "Inclusions2" : "concrete",
+          
+					"SecondaryColor1" : "Pinkish",
+         
+					 "ParticleShapeTo" : "Tabular",
+          
+					"Pattern" : "Spotted",
+          
+					"SecondarySoilType1" : "Gravelly",
+          
+					"GeologicalFormation" : "FORT CANNING BOULDER BED",
+          
+					"ParticleShapeFrom" : "Subangular",
+          
+					"SecondaryColor2" : "Purplish",
+          
+					"GeologicalMember" : "Marine Member",
+          
+					"Texture" : "Relic",
+          
+					"SoilStrengthCatFrom" : "Firm",
+          
+					"Depth" : 25,
+          
+					"PrincipalSoilType" : "CLAY",
+          
+					"ParticleSizeTo" : "Medium",
+          
+					"PrimaryColor4" : "Yellow",
+          
+					"Inclusions" : "decayed wood",
+          
+					"PrimaryColor3" : "Green"
+        
+				}
+      
+				],
+      
+	
+				"BoreholeID" : 12,
+      
+				"CurrentUser" : "054b0192-feec-4b24-8df2-6e15086e39a2",
+      
+				"ContractGUID" : "5238a863-1208-4ae2-9738-caf205362313",
+      
+				"SaveActivitylogItemColl" : [
+        
+				{
+          
+					"UploadImageFile" : "39FBF53A-E5E2-47C1-B270-AAD055506B17",
+          
+					"Activity" : "Start of Work",
+          
+					"StartTime" : "10:29 AM"
+        
+				},
+        
+				{
+          
+					"Activity" : "Installation\/ Test",
+         
+					 "StartTime" : "10:30 AM",
+          
+					"Depth" : "10"
+        
+				}
+      
+				],
+     
+				 "SaveInSituLogItemColl" : [
+        
+				{
+          
+					"InSituTestType" : "Borehole Shifted",
+
+				          	"Value1" : "20"
+        
+				},
+        
+				{
+          
+					"InSituTestType" : "Trial Pit",
+          
+					"Value3" : "7",
+          
+					"Value1" : "5",
+          
+					"Value2" : "6"
+        
+				},
+        
+				{
+          
+					"InSituTestType" : "Ground Water Observation",
+				         	 "Value3" : "5",
+          
+					"Value1" : "10",
+          
+					"TimeStamp" : "10:38 AM",
+         
+					 "Value2" : "11"
+        
+				},
+        
+				{
+          
+					"Value9" : "6",
+          
+					"Value8" : "8",
+          
+					"Value2" : "23",
+          
+					"InSituTestType" : "SPT",
+          
+					"Penetration" : "6",
+          
+					"Value7" : "7",
+          
+					"Value1" : "22",
+          
+					"Value6" : "6",
+          
+					"SDPenetration" : "5",
+          
+					"Value5" : "7",
+         
+					 "SPTRebound" : false,
+         
+					 "Value4" : "7"
+        
+				},
+        
+				{
+         	 "Value6" : "6",
+          
+					"InSituTestType" : "CR",
+         
+					 "Value7" : "4",
+          
+					"Value4" : "77",
+         	
+					 "Value1" : "23",
+          
+					"Value5" : "8",
+          
+					"Value2" : "24"
+        
+				},
+        
+				{
+          
+					"InSituTestType" : "ATT - UD",
+         
+					 "Value2" : "8",
+          
+					"Value1" : "6"
+        
+				}
+      
+				],
+      
+					"RigNo" : "R11",
+      
+					"Easting" : "37.78583400",
+     
+				 "SaveRockTypeLogItemColl" : [
+        
+				{
+          
+					"PrimaryColor3" : "Brown",
+         
+					 "SpacingFrom" : "Extremely Closely Spaced",
+          
+					"Grade" : "G(I)",
+          
+					"GrainSize" : "Fine grained",
+          
+					"OrientationJ1To" : "8",
+          
+					"OrientationJ2From" : "9",
+          
+					"OrientationJ2To" : "8",
+          
+					"Remarks" : "Remarks here",
+          
+					"Type" : "Stepped",
+          
+					"Intensity" : "Dark",
+          
+					"WeatheringDesc" : "Destructured",
+         
+					 "EndDepth" : "27",
+         
+					 "PrimaryColor1" : "Light Grey",
+          
+					"OrientationJ3To" : "22",
+          
+					"SecondaryColor1" : "Whitish",
+          
+					"RockName" : "Igneous",
+          
+					"Inclusions" : "Sand",
+         
+					 "Roughness" : "Rough",
+          
+					"PrimaryColor4" : "Grey",
+          
+					"SpacingTo" : "Closely Spaced",
+          
+					"Roughness2" : "Slickensided",
+          
+					"ApertureFrom" : "Extremely Wide",
+          
+					"Depth" : "26",
+          
+					"OrientationJ1From" : "7",
+          
+					"RockStrengthTo" : "Extremely Weak",
+         
+					 "Pattern" : "Mottled",
+          
+					"PrimaryColor2" : "Green",
+          
+					"OrientationJ3From" : "12",
+          
+					"InFilling" : "Gravel",
+          
+					"RockClan" : "Acid Clan",
+          
+					"RockCommonName" : "GRANITE PORPHYRY",
+          
+					"RockStrengthFrom" : "Extremely Strong",
+          
+					"SecondaryColor2" : "Purplish",
+          
+					"ApertureTo" : "Moderately Wide",
+          
+					"GeologicalFormation" : "FORT CANNING BOULDER BED"
+        
+				}
+      ],
+     
+				 "SupervisorName" : "Supervisor1",
+     
+				 "BoreholeDate" : "24-03-2014",
+      
+				"AssistantName2" : "John",
+      
+				"HammerIDNo" : "123",
+      
+				"DiameterofCasing" : "10",
+      
+				"DrillingMethod" : "Rotary",
+      
+				"Remarks" : "Test remark"
+    
+				}
+  
+				}
+				
+}

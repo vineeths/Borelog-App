@@ -35,20 +35,43 @@ public class LastDayInsituLogItem {
 	
 	/**** JSON KEYS ****/	
 	  
-	private static final String insituTypeKey="InSituTestType";
-	private static final String descriptionKey="Description";
-	private static final String value1Key="Value1";
-	private static final String value2Key="Value2";
-	private static final String value3Key="Value3";
-	private static final String value4Key="Value4";
-	private static final String value5Key="Value5";
-	private static final String value6Key="Value6";
-	private static final String value7Key="Value7";
-	private static final String value8Key="Value8";
-	private static final String value9Key="Value9";
-	private static final String totalKey="Total";
-	private static final String presentationKey="Penetration";
-	private static final String recoveryKey="Recovery";
+	public static final String insituTypeKey="InSituTestType";
+	public static final String descriptionKey="Description";
+	public static final String value1Key="Value1";
+	public static final String value2Key="Value2";
+	public static final String value3Key="Value3";
+	public static final String value4Key="Value4";
+	public static final String value5Key="Value5";
+	public static final String value6Key="Value6";
+	public static final String value7Key="Value7";
+	public static final String value8Key="Value8";
+	public static final String value9Key="Value9";
+	public static final String totalKey="Total";
+	public static final String presentationKey="Penetration";
+	public static final String recoveryKey="Recovery";
+	public static final String primaryIDKEY="InsituLogPrimaryKey";
+	
+	/** DB**/
+	public static final String tableName="InsituLogItem";
+	 public static final String createTableQuery =
+	            "CREATE TABLE " + tableName + " (" +
+	            		primaryIDKEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+	            		ProjectInfoItem.projectGUID_key+" TEXT, "+
+	            		BoreHoleInfoItem.boreHoleInfoNoKey+"TEXT,"+
+	            		insituTypeKey + " TEXT, " +
+	            		descriptionKey + " TEXT, " +
+	            		value1Key + " TEXT, " +
+	            		value2Key + " TEXT, " +
+	            		value3Key + " TEXT, " +
+	            		value4Key + " TEXT, " +
+	            		value5Key + " TEXT, " +
+	            		value6Key + " TEXT, " +
+	            		value7Key + " TEXT, " +
+	            		value8Key + " TEXT, " +
+	            		value9Key + " TEXT, " +	            		
+						totalKey + " TEXT, " +
+						presentationKey + " TEXT, " +
+						recoveryKey + " TEXT);";
 	/**
 	 * @throws JSONException 
 	 * 

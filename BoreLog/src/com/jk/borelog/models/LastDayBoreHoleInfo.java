@@ -48,34 +48,66 @@ public class LastDayBoreHoleInfo {
 	public ArrayList<InSItuLogMaxDepthItem>inSItuLogMaxDepthItemList=new ArrayList<InSItuLogMaxDepthItem>();
 	
 	/**** JSON KEYS ****/
-	private static final String contractGUIDKey= "ContractGUID";
-	private static final String publicGUIDKey= "BHGUID";
-	private static final String boreHoleIDKey= "BoreholeID";
-	private static final String clientNameKey= "ClientName";
-	private static final String projectNameKey= "ProjectName";
-	private static final String projectNoKey= "ProjectNo";
-	private static final String projectManagerNameKey= "ProjectManagerName";
-	private static final String supervisorNameKey= "SupervisorName";
-	private static final String boreHoleNoKey= "BoreholeNo";
-	private static final String boreHoleDateKey= "BoreholeDate";
-	private static final String rigNoKey= "RigNo";
-	private static final String drillingMethodKey= "DrillingMethod";
-	private static final String diameterOfCasingKey= "DiameterofCasing";
-	private static final String diameterOfBoreHoleKey= "DiameterofBorehole";
-	private static final String northingKey= "Northing";
-	private static final String eastingKey= "Easting";
-	private static final String drillerNameKey= "DrillerName";
-	private static final String assistantName1Key= "AssistantName1";
-	private static final String assistantName2Key= "AssistantName2";
-	private static final String assistantName3Key= "AssistantName3";
-	private static final String assistantName4Key= "AssistantName4";
-	private static final String remarksKey= "Remarks";
-	private static final String terminationDepthKey= "TerminationDepth";
-	private static final String lastRecordDepthKey= "LastRecordDepth";
-	private static final String lastDayActivityLogItemListKey= "LastDayActivityLogItemColl";
-	private static final String lastDayDrillingLogItemListKey= "LastDayDrillingLogItemColl";
-	private static final String lasDayInsituLogItemListKey= "LastDayInSituLogItemColl";
-	private static final String inSItuLogMaxDepthItemListKey= "InSituLogMaxDepthItemColl";
+	public static final String contractGUIDKey= "ContractGUID";
+	public static final String publicGUIDKey= "BHGUID";
+	public static final String boreHoleIDKey= "BoreholeID";
+	public static final String clientNameKey= "ClientName";
+	public static final String projectNameKey= "ProjectName";
+	public static final String projectNoKey= "ProjectNo";
+	public static final String projectManagerNameKey= "ProjectManagerName";
+	public static final String supervisorNameKey= "SupervisorName";
+	public static final String boreHoleNoKey= "BoreholeNo";
+	public static final String boreHoleDateKey= "BoreholeDate";
+	public static final String rigNoKey= "RigNo";
+	public static final String drillingMethodKey= "DrillingMethod";
+	public static final String diameterOfCasingKey= "DiameterofCasing";
+	public static final String diameterOfBoreHoleKey= "DiameterofBorehole";
+	public static final String northingKey= "Northing";
+	public static final String eastingKey= "Easting";
+	public static final String drillerNameKey= "DrillerName";
+	public static final String assistantName1Key= "AssistantName1";
+	public static final String assistantName2Key= "AssistantName2";
+	public static final String assistantName3Key= "AssistantName3";
+	public static final String assistantName4Key= "AssistantName4";
+	public static final String remarksKey= "Remarks";
+	public static final String terminationDepthKey= "TerminationDepth";
+	public static final String lastRecordDepthKey= "LastRecordDepth";
+	public static final String lastDayActivityLogItemListKey= "LastDayActivityLogItemColl";
+	public static final String lastDayDrillingLogItemListKey= "LastDayDrillingLogItemColl";
+	public static final String lasDayInsituLogItemListKey= "LastDayInSituLogItemColl";
+	public static final String inSItuLogMaxDepthItemListKey= "InSituLogMaxDepthItemColl";
+	
+	/*** DB ***/
+	public static final String tableName="BoreHoleInfoItem";
+	 public static final String createTableQuery =
+	            "CREATE TABLE " + tableName + " (" +
+	            		contractGUIDKey + " TEXT PRIMARY KEY, " +
+	            		publicGUIDKey + " TEXT, " +
+	            		boreHoleIDKey +" TEXT, "  +
+	            		clientNameKey +"TEXT," +
+	            		projectNameKey+"TEXT," +
+	            		projectNoKey+"TEXT," +
+	            		projectManagerNameKey+"TEXT," +
+	            		supervisorNameKey+"TEXT," +
+	            		boreHoleNoKey+"TEXT," +
+	            		boreHoleDateKey+"TEXT," +
+	            		rigNoKey+"TEXT," +
+	            		drillingMethodKey+"TEXT," +
+	            		diameterOfCasingKey+"TEXT," +
+	            		diameterOfBoreHoleKey+"TEXT," +
+	            		northingKey+"TEXT," +
+	            		eastingKey+"TEXT," +
+	            		drillerNameKey	+"TEXT," +
+	            		assistantName1Key+"TEXT," +
+	            		assistantName2Key+"TEXT," +
+	            		assistantName3Key+"TEXT," +
+	            		assistantName4Key+"TEXT," +
+	            		remarksKey	+"TEXT," +
+	            		terminationDepthKey	+"TEXT," +
+	            		lastRecordDepthKey	+"TEXT," +
+	            		inSItuLogMaxDepthItemListKey+"TEXT" +
+	            				");";
+	 
 	/**
 	 * @throws JSONException 
 	 * 

@@ -24,13 +24,24 @@ public class UserInfo {
 	public String userRights;
 	
 	/***** JSON KEYS *****/
-	private String userGUID_KEY="UserGUID";
-	private String userName_KEY="UserName";
-	private String userID_KEY="UserID";
-	private String userEmail_KEY="UserEmail";
-	private String userMbileNo_KEY="UserMobileNo";
-	private String UserRights_KEY="UserRights";
+	public static final String userGUID_KEY="UserGUID";
+	public static final String userName_KEY="UserName";
+	public static final String userID_KEY="UserID";
+	public static final String userEmail_KEY="UserEmail";
+	public static final String userMbileNo_KEY="UserMobileNo";
+	public static final String UserRights_KEY="UserRights";
 	
+	
+	/*** DB ***/
+	public static final String tableName="UserInfo";
+	 public static final String createTableQuery =
+	            "CREATE TABLE " + tableName + " (" +
+	                        userGUID_KEY + " TEXT PRIMARY KEY, " +
+	                        userName_KEY + " TEXT, " +
+	                        userID_KEY + " TEXT, " +
+	                        userEmail_KEY + " TEXT, " +
+	                        userMbileNo_KEY + " TEXT, " +
+	                        UserRights_KEY + "TEXT);";
 	/**
 	 * Constructor to set all the values from json object 
 	 * @throws JSONException 

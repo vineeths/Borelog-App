@@ -27,10 +27,18 @@ public class ProjectInfoItem {
 	
 	/**** JSON KEYS ****/
 	
-	private static final String projectGUID_key="ProjectGUID";
+	public static final String projectGUID_key="ProjectGUID";
 	public static final String projectName_key="ProjectName";
 	public static final String projectNo_key="ProjectNo";
 	public static final String boreHoleInfoItem_key="BoreHoleInfoItemColl";
+	
+	/*** DB ***/
+	public static final String tableName="ProjectInfo";
+	 public static final String createTableQuery =
+	            "CREATE TABLE " + tableName + " (" +
+	            		projectGUID_key + " TEXT PRIMARY KEY, " +
+	            		projectName_key + " TEXT, " +
+	            		projectNo_key + " TEXT);";
 	/**
 	 * @throws JSONException 
 	 * 
