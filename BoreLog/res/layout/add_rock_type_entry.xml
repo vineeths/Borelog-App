@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:background="@color/light_blue" >
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+        >
+    
+    <LinearLayout
+        android:id="@+id/dataContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+		android:padding="5dp"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       
+        <RelativeLayout
+            android:id="@+id/fromDepthLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/diameterCasingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="From Depth"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginRight="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/fromDepthExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_toLeftOf="@+id/fromDepthUnit"
+       		    android:layout_centerVertical="true"
+       		    android:gravity="right"
+       		    android:ems="6"
+       		    android:paddingRight="2dp"
+       		    android:singleLine="true"
+       		    android:background="@android:color/white"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+        		android:id="@+id/fromDepthUnit"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:text="(mm)"
+        		 />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/sameAsPreviousLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/sameAsPreviousTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Same as prev Layer"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginRight="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       		<ToggleButton
+       		    android:id="@+id/sameAsPreviousToggle"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_alignParentTop="true"
+       		    android:text="ToggleButton" />
+       		
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/rockStrengthLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/rockStrengthTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Rock Strength"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       		<Button
+       		    android:id="@+id/rockStrengthFromCategoryBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/rockStrengthTV"
+       		    android:layout_marginTop="2dp"
+       		    android:text="test" />
+
+       		<TextView
+       		    android:id="@+id/soilStrengthToTv"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_alignBaseline="@+id/rockStrengthFromCategoryBt"
+       		    android:layout_alignBottom="@+id/rockStrengthFromCategoryBt"
+       		    android:layout_centerHorizontal="true"
+       		    android:text="To"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<Button
+       		    android:id="@+id/rockStrengthToCategoryBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/rockStrengthTV"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       
+         
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/endDepthLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/endDepthTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="End Depth"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginRight="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/endDepthExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_toLeftOf="@+id/endDepthUnit"
+       		    android:layout_centerVertical="true"
+       		    android:gravity="right"
+       		    android:ems="6"
+       		    android:paddingRight="2dp"
+       		    android:singleLine="true"
+       		    android:background="@android:color/white"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+        		android:id="@+id/endDepthUnit"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:text="(mm)"
+        		 />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/terminationDepthLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/terminationDepthTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Termination Depth"
+       		    android:layout_centerVertical="true"
+       		    android:layout_toLeftOf="@+id/terminationDepthExt"
+       		    android:layout_marginRight="2dp"
+       		    android:lines="2"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/terminationDepthExt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_toLeftOf="@+id/terminationDepthUnit"
+       		    android:layout_centerVertical="true"
+       		    android:gravity="right"
+       		    android:ems="6"
+       		    android:paddingRight="2dp"
+       		    android:singleLine="true"
+       		    android:background="@android:color/white"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+        		android:id="@+id/terminationDepthUnit"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:text="(mm)"
+        		 />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       
+       </LinearLayout>
+        <TextView 
+       android:id="@+id/colorSelectionTv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Color Selection"
+       android:layout_below="@+id/dataContainerLayout"
+       android:textStyle="bold"
+       android:layout_marginTop="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="@color/blue"
+       		     />
+      <LinearLayout
+        android:id="@+id/intensityContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/colorSelectionTv"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/intensityLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/intensityTypeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Intensity"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/intensity"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/intensityArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/intensityArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/secondaryColor1Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/secondaryColor1TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Secondary Color 1"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/secondaryColor1"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/secondaryColor1Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/secondaryColor1Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+		<RelativeLayout
+            android:id="@+id/primaryColor1Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/primaryColor1TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Primary Color 1"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/primaryColor1"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/primaryColor1Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/primaryColor1Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       </LinearLayout>
+       <LinearLayout
+        android:id="@+id/patternContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/intensityContainerLayout"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/patternLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/patternTypeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Pattern"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/pattern"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/patternArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/patternArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/secondaryColor2Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/secondaryColor2TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Secondary Color 2"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/secondaryColor2"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/secondaryColor2Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/secondaryColor2Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+		<RelativeLayout
+            android:id="@+id/primaryColor2Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/primaryColor2TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Primary Color 2"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/primaryColor1"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/primaryColor2Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/primaryColor2Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       </LinearLayout>
+        <LinearLayout
+        android:id="@+id/primaryColorContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/patternContainerLayout"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/primaryColor3Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/primaryColor3TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Primary Color 3"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/primaryColor3"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/primaryColor3Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/primaryColor3Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/primaryColor4Layout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/primaryColor4TV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Primary Color 4"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/primaryColor4"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/primaryColor4Arrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/primaryColor4Arrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       </LinearLayout>
+       
+       <TextView 
+       android:id="@+id/rockDetailsTv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Rock Details"
+       android:layout_below="@+id/primaryColorContainerLayout"
+       android:textStyle="bold"
+       android:layout_marginTop="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="@color/blue"
+       		     />
+        <LinearLayout
+        android:id="@+id/rockDetailsContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/rockDetailsTv"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/grainSizeLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/grainSizeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Grain Size"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/grainSize"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/grainSizeArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/grainSizeArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/rockNameLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/rockNameTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Rock Name"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/rockName"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/rockNameArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/rockNameArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+		<RelativeLayout
+            android:id="@+id/clanLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/clanTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Clan"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/clan"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/clanArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/clanArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/rankCommonLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/rankCommonTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Rank Common Name"
+       		    android:lines="2"
+       		    android:layout_toLeftOf="@+id/rankCommon"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/rankCommon"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/rankCommonArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/rankCommonArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/wheatherDescriptionLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/wheatherDescriptionTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Wheathering Description"
+       		    android:lines="2"
+       		    android:layout_toLeftOf="@+id/rankCommon"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/wheatherDescription"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/wheatherDescriptionArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/wheatherDescriptionArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/inclusionRockTypeLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/inclusionRockTypeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Inclusions"
+       		    android:lines="2"
+       		    android:layout_toLeftOf="@+id/rankCommon"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/inclusionRockType"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/inclusionRockTypeArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/inclusionRockTypeArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/spacingLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/spacingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Spacing"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       		<Button
+       		    android:id="@+id/spacingFromBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/spacingTV"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+
+       		<TextView
+       		    android:id="@+id/spacingToTv"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_alignBaseline="@+id/spacingFromBt"
+       		    android:layout_alignBottom="@+id/spacingFromBt"
+       		    android:layout_centerHorizontal="true"
+       		    android:text="and"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<Button
+       		    android:id="@+id/spacingToBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/spacingTV"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+       </RelativeLayout>
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       </LinearLayout>
+       </RelativeLayout>
+       </ScrollView>
+</RelativeLayout>

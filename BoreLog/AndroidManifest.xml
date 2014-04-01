@@ -39,6 +39,8 @@
         <activity android:name="InsituTestLogPage"></activity>
         <activity android:name="DrillingLogPage"></activity>
         <activity android:name="AddDrillingLogPage"></activity>
+        <activity android:name="AddSoilTypeEntryPage"></activity>
+        <activity android:name="AddRockTypeEntryPage"></activity>
     </application>
 
 </manifest>

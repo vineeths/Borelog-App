@@ -93,7 +93,14 @@ public class AddDrillingLogPage extends BaseActivity implements OnItemClickListe
 	}
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		
-		Toast.makeText(context, "Not implemented the action for "+drillingLogList.get(arg2), Toast.LENGTH_SHORT).show();
+		if(arg2==0){
+			Intent intent=new Intent(context, AddSoilTypeEntryPage.class);
+			startActivity(intent);
+		}
+		else
+		{
+			Intent intent=new Intent(context, AddRockTypeEntryPage.class);
+			startActivity(intent);
+		}
 	}
 }
