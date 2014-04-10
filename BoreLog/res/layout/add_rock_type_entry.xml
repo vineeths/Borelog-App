@@ -885,6 +885,558 @@
         android:layout_height="1dp" 
         android:background="@drawable/strock"/>
        </LinearLayout>
+       <TextView 
+       android:id="@+id/orientationJ1Tv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Orientation - J1"
+       android:layout_below="@+id/rockDetailsContainerLayout"
+       android:textStyle="bold"
+       android:layout_marginTop="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="@color/blue"
+       		     />
+      <LinearLayout
+        android:id="@+id/j1ContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/orientationJ1Tv"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/j1FromLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j1FromTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="From"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j1From"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/j1ToLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j1ToTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="To"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j1To"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       </LinearLayout>
+        <TextView 
+       android:id="@+id/orientationJ2Tv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Orientation - J2"
+       android:layout_below="@+id/j1ContainerLayout"
+       android:textStyle="bold"
+       android:layout_marginTop="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="@color/blue"
+       		     />
+      <LinearLayout
+        android:id="@+id/j2ContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/orientationJ2Tv"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/j2FromLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j2FromTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="From"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j2From"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/j2ToLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j2ToTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="To"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j2To"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       </LinearLayout>
+        <TextView 
+       android:id="@+id/orientationJ3Tv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Orientation - J3"
+       android:layout_below="@+id/j2ContainerLayout"
+       android:textStyle="bold"
+       android:layout_marginTop="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="@color/blue"
+       		     />
+      <LinearLayout
+        android:id="@+id/j3ContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/orientationJ3Tv"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/j3FromLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j3FromTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="From"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j3From"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       <RelativeLayout
+            android:id="@+id/j3ToLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/j3ToTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="To"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<EditText
+       		    android:id="@+id/j3To"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:inputType="number"
+       		    android:ems="8"
+       		    android:background="@android:color/white"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:layout_alignParentRight="true"
+       		   />
+       </RelativeLayout>
+       </LinearLayout>
+       <LinearLayout
+        android:id="@+id/bottomContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:padding="5dp"
+		android:layout_below="@+id/j3ContainerLayout"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical"
+         >
+       <RelativeLayout
+            android:id="@+id/roughnessLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/roughnessTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Roughness"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       		<Button
+       		    android:id="@+id/roughnessFromBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/roughnessTV"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+
+       		<TextView
+       		    android:id="@+id/roughnessToTv"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_alignBaseline="@+id/roughnessFromBt"
+       		    android:layout_alignBottom="@+id/roughnessFromBt"
+       		    android:layout_centerHorizontal="true"
+       		    android:text="To"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<Button
+       		    android:id="@+id/roughnessToBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/roughnessTV"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/apertureLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	>
+       		<TextView
+       		    android:id="@+id/apertureTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Aperture"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       		<Button
+       		    android:id="@+id/apertureFromBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/apertureTV"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+
+       		<TextView
+       		    android:id="@+id/apertureToTv"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_alignBaseline="@+id/apertureFromBt"
+       		    android:layout_alignBottom="@+id/apertureFromBt"
+       		    android:layout_centerHorizontal="true"
+       		    android:text="To"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<Button
+       		    android:id="@+id/apertureToBt"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_below="@+id/roughnessTV"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_marginTop="2dp"
+       		    android:text="blank" />
+       </RelativeLayout>
+        <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/typeLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/typeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Type"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/type"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/typeArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/typeArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/inFillingLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/inFillingTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="In-Filling"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/inFilling"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/inFillingArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/inFillingArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/geologicalFormationLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/geologicalFormationTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Geological Formation"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/geologicalFormation"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/geologicalFormationArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/geologicalFormationArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       
+        <RelativeLayout
+            android:id="@+id/gradeLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/gradeTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Grade"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/grade"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/gradeArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/gradeArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+        <RelativeLayout
+            android:id="@+id/remarksLayout"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:padding="3dp"	
+        	android:gravity="center_vertical"
+        	>
+
+       		<TextView
+       		    android:id="@+id/remarksTV"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="Remarks"
+       		    android:layout_alignParentLeft="true"
+       		    android:layout_centerVertical="true"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<TextView
+       		    android:id="@+id/remarks"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="yyy"
+       		    android:layout_toLeftOf="@+id/remarksArrow"
+       		    android:textColor="@color/blue"
+       		    android:layout_centerVertical="true"
+       		    android:layout_marginLeft="2dp"
+       		    android:textAppearance="?android:attr/textAppearanceMedium" />
+       		<ImageView
+        		android:id="@+id/remarksArrow"
+        		android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/right_arrow" />
+       </RelativeLayout>
+       
+       <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" 
+        android:background="@drawable/strock"/>
+       </LinearLayout>
+       <Button 
+          android:id="@+id/saveRockTypeBt"
+       	  android:layout_width="match_parent"
+       	  android:layout_height="wrap_content"
+       	  android:layout_below="@+id/bottomContainerLayout"
+       	  android:background="@drawable/green_button"
+       	  android:layout_centerHorizontal="true"
+       	  android:layout_margin="20dp"
+       	  android:text="Save" 
+       	  android:textColor="@android:color/white"/>
        </RelativeLayout>
        </ScrollView>
 </RelativeLayout>
