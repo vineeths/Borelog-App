@@ -5,7 +5,9 @@
  */
 package com.jk.borelog.common;
 
-import com.jk.borelog.models.BoreHoleInfoItem;
+import java.util.ArrayList;
+
+import com.jk.borelog.models.AdminInfoItem;
 import com.jk.borelog.models.ProjectInfoItem;
 import com.jk.borelog.models.UserInfo;
 
@@ -23,4 +25,5 @@ public class Globals {
 		public static UserInfo userInfo;
 		public static ProjectInfoItem projectInfoItem;
 		public static String boreHoleInfoItem;
+		public static ArrayList<AdminInfoItem> adminInfoItemList;
 }

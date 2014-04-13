@@ -78,7 +78,8 @@ public class BoreHoleInfoDetailPage extends BaseActivity implements OnClickListe
 			finish();
 		}
 		if(v.getId()==R.id.rigNumrLayout){
-			String string[]=new String[]{"test1","test2"};
+			
+			String string[]=getArrayForLookUpValue(getLookUpValuesForModuleName("RigNo"), 1);
 			showChoiceBoxDialog(string, "Rig Number", 0, this,v);
 		}
 	}
@@ -95,7 +96,7 @@ public class BoreHoleInfoDetailPage extends BaseActivity implements OnClickListe
 	}
 
 	@Override
-	public void doneClicked(View v, int position) {
+	public void doneClicked(View v, int position, String value) {
 
 		if(v.getId()==R.id.rigNumrLayout){
 			Toast.makeText(context, "postition "+position, Toast.LENGTH_SHORT).show();

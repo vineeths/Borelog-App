@@ -57,14 +57,14 @@ public class PostRequest {
 	         {
 	             HttpEntity entity = response.getEntity();
 	             responseString = EntityUtils.toString(entity);
-	             Log.v("response", responseString);
+	            // Log.v("response", responseString);
 	         }
 			
 			
 			
 			JSONObject jObject = new JSONObject(responseString);
 			res = jObject;
-	       
+//			Log.v("response", jObject.toString());
 			
 		} catch (NullPointerException e) {
 			Logger.show(e);

@@ -34,7 +34,7 @@ public class ProjectListAdapter extends ArrayAdapter<ProjectInfoItem>{
 	 */
 	public ProjectListAdapter(Context context, int textViewResourceId,
 			ArrayList<ProjectInfoItem> objects) {
-		super(context, textViewResourceId, objects);
+		super(context, android.R.layout.simple_list_item_single_choice, objects);
 		this.projectList=objects;
 		this.context=context;
 	}
@@ -43,6 +43,7 @@ public class ProjectListAdapter extends ArrayAdapter<ProjectInfoItem>{
 	}
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		
 		View v = convertView;
 		ViewHolder holder;
 		if (v == null) {

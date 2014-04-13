@@ -15,5 +15,5 @@ public interface ChoicesItemSelected {
 
 	public void itemSelected(String selectedItem);
 	public void cancelClicked();
-	public void doneClicked(View v,int position);
+	public void doneClicked(View v,int position,String seledtedItem);
 }

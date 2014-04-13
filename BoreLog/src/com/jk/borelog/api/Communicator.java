@@ -113,16 +113,18 @@ public class Communicator {
 			
 			JSONObject loginResponse=PostRequest.post(url, new JSONObject());
 			JSONObject innerObject=new JSONObject(loginResponse.get("d").toString());
+			
 			ArrayList<Object>responseList=new ArrayList<Object>();
 			Results results=new Results(innerObject.getJSONObject("Result"));
 			JSONArray adminInfoItemArray=innerObject.getJSONArray("AdminInfoItemColl");
+			
 			ArrayList<AdminInfoItem> adminInfoItemList=new ArrayList<AdminInfoItem>();
 			for (int i = 0; i < adminInfoItemArray.length(); i++) {
 				AdminInfoItem adminInfoItem=new AdminInfoItem(adminInfoItemArray.getJSONObject(i));
 				adminInfoItemList.add(adminInfoItem);
-				Log.i("Communicator", "**** admin info ="+ adminInfoItem.moduleName);
+				
 			}
-			Log.i("Communicator", "**** admin list size ="+ adminInfoItemList.size());
+			Globals.adminInfoItemList=adminInfoItemList;
 			responseList.add(results);
 			responseList.add(adminInfoItemList);
 			return responseList;
