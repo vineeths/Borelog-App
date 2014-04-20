@@ -24,8 +24,18 @@ public class AdminInfoItem {
 	
 	/**** JSON KEYS ****/
 	
-	private static final String moduleNameKey="ModuleName";
-	private static final String lookUpValueItemKey="LookupValuesItemColl";
+	public static final String moduleNameKey="ModuleName";
+	public static final String lookUpValueItemKey="LookupValuesItemColl";
+	
+	/*** DB ***/
+	public static final String tableName="AdminInfoItem";
+	 public static final String createTableQuery =
+	            "CREATE TABLE " + tableName + " (" +
+	            		moduleNameKey + " TEXT PRIMARY KEY, " +
+	            		LookUpValueItems.lookUpValue1_key + " TEXT, " +
+	            		LookUpValueItems.lookUpValue2_key + " TEXT, " +
+	            		LookUpValueItems.lookUpValue3_key + " TEXT);";
+	 
 	/**
 	 * @throws JSONException 
 	 * 
@@ -33,9 +43,6 @@ public class AdminInfoItem {
 	public AdminInfoItem(JSONObject jsonObject) throws JSONException {
 		super();
 		this.moduleName=jsonObject.getString(moduleNameKey);
-		Log.i("Module Name", this.moduleName);
-		Log.i("Module Name", jsonObject.toString());
-		Log.i("Module Name", "array lenght"+jsonObject.getJSONArray(lookUpValueItemKey).length());
 		for (int i = 0; i < jsonObject.getJSONArray(lookUpValueItemKey).length(); i++) {
 			LookUpValueItems lookUpValueItem=new LookUpValueItems(jsonObject
 					.getJSONArray(lookUpValueItemKey).getJSONObject(i));

@@ -33,6 +33,8 @@ import com.jk.borelog.api.Communicator;
 import com.jk.borelog.common.BaseActivity;
 import com.jk.borelog.common.Globals;
 import com.jk.borelog.common.NetworkConnectivityManager;
+import com.jk.borelog.db.AdminInfoItemDBAdapter;
+import com.jk.borelog.models.AdminInfoItem;
 import com.jk.borelog.models.BoreHoleInfoItem;
 import com.jk.borelog.models.ProjectInfoItem;
 import com.jk.borelog.models.Results;
@@ -48,6 +50,7 @@ public class ProjectList extends BaseActivity implements OnClickListener, OnItem
 	ProjectDetailsTask projectDetailsTask;
 	ProjectListAdapter projectListAdapter;
 	ListView projectListView;
+	ArrayList<AdminInfoItem>adminInfoItemList=new ArrayList<AdminInfoItem>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -104,6 +107,8 @@ public class ProjectList extends BaseActivity implements OnClickListener, OnItem
 					Communicator communicator=new Communicator(context);
 					responseList=communicator.getProjectList(Globals.userInfo.userGUID);
 					communicator.getAdminLookupValues();
+					
+					
 					Results loginResults=(Results)responseList.get(0);
 					if(loginResults.response.equalsIgnoreCase("1")){
 						Object object=responseList.get(1);
@@ -185,9 +190,6 @@ public class ProjectList extends BaseActivity implements OnClickListener, OnItem
 		projectListView.setAdapter(projectListAdapter);
 	}
 
-	/* (non-Javadoc)
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View v) {
 		

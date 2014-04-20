@@ -8,6 +8,8 @@ package com.jk.borelog.models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 /**
  * @author Linson
  *
@@ -22,9 +24,9 @@ public class LookUpValueItems {
 	
 	/**** JSON KEYS ****/
 	
-	private static final String lookUpValue1_key="LookupValue1";
-	private static final String lookUpValue2_key="LookupValue2";
-	private static final String lookUpValue3_key="LookupValue3";
+	public static final String lookUpValue1_key="LookupValue1";
+	public static final String lookUpValue2_key="LookupValue2";
+	public static final String lookUpValue3_key="LookupValue3";
 	/**
 	 * @throws JSONException 
 	 * 
@@ -32,8 +34,8 @@ public class LookUpValueItems {
 	public LookUpValueItems(JSONObject jsonObject) throws JSONException {
 		super();
 		this.lookUpValue1=jsonObject.getString(lookUpValue1_key);
-		this.lookUpValue1=jsonObject.getString(lookUpValue2_key);
-		this.lookUpValue1=jsonObject.getString(lookUpValue3_key);
+		this.lookUpValue2=jsonObject.getString(lookUpValue2_key);
+		this.lookUpValue3=jsonObject.getString(lookUpValue3_key);
 	}
 	
 	

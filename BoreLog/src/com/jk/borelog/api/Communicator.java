@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import com.jk.borelog.common.Globals;
 import com.jk.borelog.common.NetworkConnectivityManager;
+import com.jk.borelog.db.AdminInfoItemDBAdapter;
 import com.jk.borelog.models.AdminInfoItem;
 import com.jk.borelog.models.LastDayBoreHoleInfo;
 import com.jk.borelog.models.ProjectInfoItem;
@@ -113,17 +114,18 @@ public class Communicator {
 			
 			JSONObject loginResponse=PostRequest.post(url, new JSONObject());
 			JSONObject innerObject=new JSONObject(loginResponse.get("d").toString());
-			
 			ArrayList<Object>responseList=new ArrayList<Object>();
 			Results results=new Results(innerObject.getJSONObject("Result"));
 			JSONArray adminInfoItemArray=innerObject.getJSONArray("AdminInfoItemColl");
-			
+			String moduleNames="";
+			Log.i("Module Name size array","size ="+ adminInfoItemArray.length());
 			ArrayList<AdminInfoItem> adminInfoItemList=new ArrayList<AdminInfoItem>();
 			for (int i = 0; i < adminInfoItemArray.length(); i++) {
 				AdminInfoItem adminInfoItem=new AdminInfoItem(adminInfoItemArray.getJSONObject(i));
 				adminInfoItemList.add(adminInfoItem);
-				
+				moduleNames=moduleNames+i +" "+adminInfoItem.moduleName+"\n";
 			}
+			Log.i("ModuleName", moduleNames);
 			Globals.adminInfoItemList=adminInfoItemList;
 			responseList.add(results);
 			responseList.add(adminInfoItemList);

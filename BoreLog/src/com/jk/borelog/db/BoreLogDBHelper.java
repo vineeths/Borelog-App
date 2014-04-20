@@ -5,6 +5,7 @@
  */
 package com.jk.borelog.db;
 
+import com.jk.borelog.models.AdminInfoItem;
 import com.jk.borelog.models.BoreHoleInfoItem;
 import com.jk.borelog.models.LastDayActivityLogItem;
 import com.jk.borelog.models.LastDayBoreHoleInfo;
@@ -24,7 +25,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BoreLogDBHelper extends SQLiteOpenHelper{
 
 	public static final String DATABASE_NAME = "Borelog.db";
-	public static final int DATABASE_VERSION = 0;
+	public static final int DATABASE_VERSION = 1;
 
 	/**
 	 * @param context
@@ -40,6 +41,7 @@ public class BoreLogDBHelper extends SQLiteOpenHelper{
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(UserInfo.createTableQuery);
+		db.execSQL(AdminInfoItem.createTableQuery);
 		db.execSQL(ProjectInfoItem.createTableQuery);
 		db.execSQL(BoreHoleInfoItem.createTableQuery);
 		db.execSQL(LastDayActivityLogItem.createTableQuery);
@@ -50,6 +52,7 @@ public class BoreLogDBHelper extends SQLiteOpenHelper{
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		db.execSQL("DROP TABLE IF EXISTS " + UserInfo.createTableQuery);
+		db.execSQL("DROP TABLE IF EXISTS " + AdminInfoItem.createTableQuery);
 		db.execSQL("DROP TABLE IF EXISTS " + ProjectInfoItem.createTableQuery);
 		db.execSQL("DROP TABLE IF EXISTS " + BoreHoleInfoItem.createTableQuery);
 		db.execSQL("DROP TABLE IF EXISTS " + LastDayActivityLogItem.createTableQuery);

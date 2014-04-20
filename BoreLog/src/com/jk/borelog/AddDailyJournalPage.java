@@ -6,6 +6,7 @@
 package com.jk.borelog;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import android.content.ComponentName;
@@ -27,16 +28,18 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.LayoutParams;
 import com.jk.borelog.common.BaseActivity;
+import com.jk.borelog.interfaces.DialogItemSelected;
 
 /**
  * @author Linson
  *
  */
-public class AddDailyJournalPage extends BaseActivity implements OnClickListener{
+public class AddDailyJournalPage extends BaseActivity implements OnClickListener,DialogItemSelected{
 
 	Context context;
 	int YOUR_REQUEST_CODE=10;
-	RelativeLayout uploadPhoto;
+	RelativeLayout uploadPhoto,activityLayout;
+	TextView activityValue;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,6 +55,10 @@ public class AddDailyJournalPage extends BaseActivity implements OnClickListener
 		setActionBar();
 		uploadPhoto=(RelativeLayout)findViewById(R.id.photoLayout);
 		uploadPhoto.setOnClickListener(this);
+		activityLayout=(RelativeLayout)findViewById(R.id.activityLayout);
+		activityLayout.setOnClickListener(this);
+		
+		activityValue=(TextView)findViewById(R.id.activityValue);
 	}
 
 	/**
@@ -86,6 +93,13 @@ public class AddDailyJournalPage extends BaseActivity implements OnClickListener
 		}else if(arg0.getId()==R.id.photoLayout){
 			addPhoto();
 		}
+		else if(arg0.getId()==R.id.activityLayout){
+			String string[]=getArrayForLookUpValue(getLookUpValuesForModuleName("ActivityList"), 1);
+			if(activityValue.getText().toString().length()>0)
+				showChoiceBoxDialog(string, "Activity",Arrays.asList(string).indexOf(activityValue.getText().toString()) , this,arg0);
+			else 
+				showChoiceBoxDialog(string, "Activity",0 , this,arg0);
+		}
 		
 	}
 	private void addPhoto() {   
@@ -115,5 +129,22 @@ public class AddDailyJournalPage extends BaseActivity implements OnClickListener
 	    // Add the camera options.
 	    chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[]{}));
 	    startActivityForResult(chooserIntent, YOUR_REQUEST_CODE);
+	}
+
+	@Override
+	public void itemSelected(String selectedItem) {
+		
+	}
+
+	@Override
+	public void cancelClicked() {
+		
+	}
+
+	@Override
+	public void doneClicked(View v, int position, String seledtedItem) {
+		if(v.getId()==R.id.activityLayout){
+			activityValue.setText(seledtedItem);
+		}
 	}
 }

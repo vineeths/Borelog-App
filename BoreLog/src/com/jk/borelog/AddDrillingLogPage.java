@@ -71,7 +71,7 @@ public class AddDrillingLogPage extends BaseActivity implements OnItemClickListe
 		TextView title=(TextView)v.findViewById(R.id.title);
 		title.setText(Globals.boreHoleInfoItem);
 		Button backButton=(Button)v.findViewById(R.id.leftBarButton);
-		backButton.setText("InsituTestLogs");
+		backButton.setText("BoreHoles");
 		backButton.setOnClickListener(this);
 		Button rightBarButton=(Button)v.findViewById(R.id.rightBarButton);
 		rightBarButton.setVisibility(View.GONE);
